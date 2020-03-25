@@ -10,8 +10,8 @@
   </aside>
   <div class="col-md-8">
     <% if @user.agenda_items.any? %>
-      <h3>Microposts (<%= @user.agenda_items.count %>)</h3>
-      <ol class="microposts">
+      <h3>日程 (<%= @user.agenda_items.count %>)</h3>
+      <ol class="agenda_items">
         <%= render @agenda_items %>
       </ol>
       <%= will_paginate @agenda_items %>

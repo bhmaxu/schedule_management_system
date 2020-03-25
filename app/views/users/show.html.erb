@@ -10,7 +10,7 @@
   </aside>
   <div class="col-md-8">
     <% if @user.agenda_items.any? %>
-      <h3>日程 (<%= @user.agenda_items.count %>)</h3>
+      <h3>共创建了 <%= @user.agenda_items.count %> 条日程</h3>
       <ol class="agenda_items">
         <%= render @agenda_items %>
       </ol>

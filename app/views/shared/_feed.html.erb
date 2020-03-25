@@ -1,6 +1,9 @@
 <% if @feed_items.any? %>
+  <h2>您目前有 <%= @feed_items.count %> 条待办事项，需要在24h内完成</h2>
   <ol class="agenda_items">
     <%= render @feed_items %>
   </ol>
   <%= will_paginate @feed_items %>
+  <%else %>
+  <h2>您目前没有待办的日程！</h2>
 <% end %>

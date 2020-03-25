@@ -19,10 +19,25 @@ class AgendaItemsController < ApplicationController
     redirect_to request.referrer || root_url
   end
 
+  def edit
+    @agenda_item = AgendaItem.find(params[:id])
+  end
+
+  def update
+    @agenda_item = AgendaItem.find(params[:id])
+    if @agenda_item.update_attributes(agenda_item_params)
+      flash[:success] = "编辑成功！"
+      redirect_to root_path
+    else
+      render 'edit'
+    end
+
+  end
+
   private
 
   def agenda_item_params
-    params.require(:agenda_item).permit(:content)
+    params.require(:agenda_item).permit(:content, :time)
   end
 
   def correct_user

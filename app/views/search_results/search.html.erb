@@ -1,0 +1,9 @@
+<% provide(:title, '搜索') %>
+<h1>关键词搜索结果</h1>
+<% if @agenda_result.count == 0 %>
+  <div class="jumbotron">未能检索到符合条件的日程项目</div>
+<% else %>
+  <ol class="agenda_items">
+    <%= render @agenda_result %>
+  </ol>
+<% end %>

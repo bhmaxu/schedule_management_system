@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   resources :users
-  resources :agenda_items, only: [:create, :destroy]
+  resources :agenda_items
+
+  get '/search', to: 'search_results#search'
+  post '/search', to: 'search_results#search', as: 'search_results_display'
 end

@@ -7,7 +7,6 @@ gem 'bootstrap-will_paginate', '1.0.0'
 gem 'bootstrap-sass'
 gem 'bcrypt', '3.1.11'
 gem 'momentjs-rails', '>= 2.9.0'
-gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 gem "nokogiri", ">= 1.10.8"
 gem 'will_paginate', '3.3.0'
 gem "puma", ">= 3.12.4"

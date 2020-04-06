@@ -14,4 +14,5 @@ Rails.application.routes.draw do
 
   get '/search', to: 'search_results#search'
   post '/search', to: 'search_results#search', as: 'search_results_display'
+  post '/search_by_time', to: 'agenda_items#search_by_time'
 end

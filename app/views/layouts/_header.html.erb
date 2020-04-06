@@ -2,16 +2,7 @@
   <div class="container">
     <%= link_to "日程管理系统", root_path, id: "logo" %>
     <nav>
-      <% if logged_in? %>
-        <form class="navbar-form navbar-right search_bar" role="search"
-              action="/search" method="post">
-          <div class="form-group">
-            <input type="text" name="keyword" class="form-control" placeholder="输入关键词...">
-          </div>
-          <button type="submit" class="btn btn-default">搜索</button>
-        </form>
-      <% end %>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" style="padding-top: 8px">
         <li><%= link_to "首页", root_path %></li>
         <li><%= link_to "帮助", help_path %></li>
         <% if logged_in? %>
@@ -32,6 +23,23 @@
           <li><%= link_to "登录", login_path %></li>
         <% end %>
       </ul>
+      <% if logged_in? %>
+        <form class="navbar-form navbar-right search_bar" role="search" style="padding-top: 8px"
+              action="/search" method="post">
+          <div class="form-group">
+            <input type="text" name="keyword" class="form-control" placeholder="输入关键词...">
+          </div>
+          <button type="submit" class="btn btn-default">搜索</button>
+        </form>
+        <form class="navbar-form navbar-right search_bar"
+              action="/search_by_time" method="post">
+          <div class="form-group">
+            <input type="date" name="time" class="form-control" >
+          </div>
+          <button type="submit" class="btn btn-default">搜索</button>
+        </form>
+      <% end %>
+
     </nav>
   </div>
 </header>

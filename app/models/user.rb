@@ -11,6 +11,6 @@ class User < ApplicationRecord
   validates :password, presence: true, length: {minimum: 6}, allow_nil: true
 
   def feed
-    AgendaItem.where("user_id = ? and time > ? and time < ?", id, Time.now, Time.now + 24.hour)
+    AgendaItem.where("user_id = ? and time > ? and time < ?", id, Time.now + 8.hours, Time.now + 32.hour)
   end
 end

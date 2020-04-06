@@ -1,0 +1,9 @@
+<% provide(:title, "日程查找") %>
+<h1> <%= @times[0] + '-' + @times[1] + '-' + @times[2] %> 的全部日程 </h1>
+<% if @agenda_result.count == 0 %>
+  <div class="jumbotron">未能检索到符合条件的日程项目</div>
+<% else %>
+  <ol class="agenda_items">
+    <%= render @agenda_result %>
+  </ol>
+<% end %>

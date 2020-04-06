@@ -6,6 +6,6 @@ class SearchResultsController < ApplicationController
     @agenda_result = []
     AgendaItem.where("content like ?", '%' + @keyword + '%').find_each do |item|
       @agenda_result.append(item)
-    end
+  end
   end
 end

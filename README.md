@@ -1,8 +1,10 @@
 # 日程管理系统
 
-基于Ruby on Rails的简易日程管理系统。
+基于Ruby on Rails的简易日程管理系统。**项目已经部署到https://management-system-se.herokuapp.com/**。
 
 ## 环境说明
+
+以下是在本地运行项目的说明。
 
 ### 操作系统
 

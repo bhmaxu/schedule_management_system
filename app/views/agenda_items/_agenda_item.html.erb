@@ -1,7 +1,7 @@
 <li id="agenda_item-<%= agenda_item.id %>">
   <span class="content"><%= agenda_item.content %></span>
   <span class="timestamp">
-    预计完成时间: <%= agenda_item.time.localtime - 8.hours %> .
+    预计完成时间: <%= agenda_item.time.localtime  %> .
     <% if current_user?(agenda_item.user) %>
     <%= link_to  "编辑", edit_agenda_item_path(agenda_item.id), method: :get, class: "btn btn-primary"%>
     <%= link_to "删除", agenda_item, method: :delete, class: 'btn btn-danger',

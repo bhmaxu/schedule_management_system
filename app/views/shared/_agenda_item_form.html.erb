@@ -4,6 +4,6 @@
     <%= f.text_area :content, placeholder: "创建新的日程..." %>
   </div>
   <%= f.label "日期" %>
-  <%= f.datetime_select :time , :default => Time.now.localtime%>
+  <%= f.datetime_select :time , :default => Time.now%>
   <%= f.submit "发布", class: "btn btn-primary" %>
 <% end %>

@@ -18,7 +18,7 @@ class AgendaItemsController < ApplicationController
     @id = current_user.id
     @times = params[:time].split('-')
     @time = Time.mktime(@times[0], @times[1], @times[2], 0, 0, 0)
-    @end = @time.at_end_of_day + 8.hours
+    @end = @time.at_end_of_day 
     @start = @end - 24.hour
     @agenda_result = []
     AgendaItem.where("user_id = ? and time < ? and time > ?", @id, @end, @start).find_each do |item|
